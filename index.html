@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nainey | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Nainey</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero" data-aos="fade-up">
+    <div class="hero-content hero-row">
+      <div class="hero-img">
+        <img src="userx.png" alt="Nainey" />
+      </div>
+      <div class="hero-text">
+        <h1>Hey I'm <span>Nainey</span></h1>
+        <h2>Student | Intern</h2>
+        <p>Passionate about web development and programming. Currently pursuing B.Tech CSE at SRM University.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-envelope"></i></a>
+        </div>
+        <a href="#resume" class="btn">Download CV</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" data-aos="fade-up">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I’m Nainey, a Computer Science student at SRM University, Amaravati. I love building web experiences and learning new technologies. I'm focused on HTML, CSS, JavaScript, Python, and C.</p>
+      <div class="about-cards">
+        <div class="card">Studying in SRM University</div>
+        <div class="card">Location - Amaravathi, Andhra Pradesh</div>
+        <div class="card">Graduation Year - 2027</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="skills" data-aos="fade-up">
+    <h2>Skills</h2>
+    <div class="skill-cards">
+      <div class="card">HTML</div>
+      <div class="card">CSS</div>
+      <div class="card">JavaScript</div>
+      <div class="card">Python</div>
+      <div class="card">C</div>
+      <div class="card">React</div>
+      <div class="card">MySQL</div>
+      <div class="card">Git & GitHub</div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects" data-aos="fade-up">
+    <h2>Projects</h2>
+    <div class="project-filters">
+      <button onclick="filterProjects('all')">All</button>
+      <button onclick="filterProjects('html')">HTML</button>
+      <button onclick="filterProjects('js')">JavaScript</button>
+      <button onclick="filterProjects('python')">Python</button>
+    </div>
+    <div class="project-list">
+      <div class="project-card html">
+        <h3>Portfolio Website</h3>
+        <p>Personal responsive portfolio website using HTML, CSS, and JavaScript.</p>
+      </div>
+      <div class="project-card js">
+        <h3>To-do List App</h3>
+        <p>Interactive to-do app with local storage and JavaScript DOM manipulation.</p>
+      </div>
+      <div class="project-card python">
+        <h3>Weather CLI Tool</h3>
+        <p>Command-line Python tool to fetch real-time weather using an API.</p>
+      </div>
+      <div class="project-card html js">
+        <h3>Responsive Landing Page</h3>
+        <p>Modern UI landing page built with responsive design and animations.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume" data-aos="fade-up">
+    <h2>Resume</h2>
+    <p>Download my latest CV here to know more about my academic background and experiences.</p>
+    <a href="Nainey_CV.pdf" download class="btn">Download CV</a>
+  </section>
+
+  <section id="contact" data-aos="fade-up">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+    <p>Email: <a href="mailto:saripudi.nainey@gmail.com">saripudi.nainey@gmail.com</a></p>
+    <p>Phone: <a href="tel:8074436911">8074436911</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Nainey. All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    function filterProjects(category) {
+      const projects = document.querySelectorAll('.project-card');
+      projects.forEach(project => {
+        if (category === 'all' || project.classList.contains(category)) {
+          project.style.display = 'block';
+        } else {
+          project.style.display = 'none';
+        }
+      });
+    }
+
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for your message!');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
