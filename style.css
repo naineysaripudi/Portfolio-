@@ -1,0 +1,277 @@
+/* ====== General Reset ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* ====== Navbar ====== */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0d6efd;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #0d6efd;
+  }
+  
+  /* ====== Hero Section ====== */
+  .hero {
+    padding: 4rem 2rem;
+    background: #f0f4ff;
+  }
+  
+  .hero-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .hero-img img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #0d6efd;
+  }
+  
+  .hero-text {
+    max-width: 600px;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-text h1 span {
+    color: #0d6efd;
+  }
+  
+  .hero-text h2 {
+    font-weight: 400;
+    margin: 0.5rem 0;
+  }
+  
+  .hero-text p {
+    margin: 1rem 0;
+  }
+  
+  .social-icons a {
+    margin: 0 0.5rem;
+    color: #333;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #0d6efd;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background: #0d6efd;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    margin-top: 1rem;
+  }
+  
+  .btn:hover {
+    background: #084298;
+  }
+  
+  /* ====== Sections ====== */
+  section {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #0d6efd;
+  }
+  
+  /* ====== About Cards ====== */
+  .about-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .about-cards .card {
+    background: #fff;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+  }
+  
+  /* ====== Skills ====== */
+  .skill-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .card {
+    padding: 1rem 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* ====== Projects ====== */
+  .project-filters button {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 30px;
+    background: #e0e0e0;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .project-filters button:hover {
+    background: #0d6efd;
+    color: #fff;
+  }
+  
+  .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .project-card {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    transition: transform 0.3s ease;
+    text-align: left;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .project-card h3 {
+    color: #0d6efd;
+    margin-bottom: 0.5rem;
+  }
+  
+  .project-card p {
+    font-size: 0.95rem;
+    color: #444;
+  }
+  
+  /* ====== Resume ====== */
+  #resume p {
+    margin-bottom: 1rem;
+  }
+  
+  /* ====== Contact ====== */
+  form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  input, textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border 0.3s;
+  }
+  
+  input:focus, textarea:focus {
+    outline: none;
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.2);
+  }
+  
+  /* ====== Footer ====== */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: #0d6efd;
+    color: #fff;
+    margin-top: 2rem;
+  }
+  
+  /* ====== Responsive Design ====== */
+  @media (max-width: 768px) {
+    .hero-row {
+      flex-direction: column;
+    }
+  
+    .nav-links {
+      display: none;
+    }
+  
+    .skill-cards, .project-list, .about-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
